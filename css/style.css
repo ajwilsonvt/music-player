@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+form {
+  margin: 1em 0;
+}
+
+.container {
+  margin: 3em;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100px;
+  margin: 1em 0;
+}
+
+.section {
+  margin-left: 1em;
+}
+
+.section p {
+  margin: 0;
+}
