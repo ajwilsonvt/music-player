@@ -2,20 +2,29 @@
 <html lang="en">
 <head>
   <!-- title -->
-  <title>LinkedList Lab</title>
+  <title>Music Player</title>
   <!-- meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' ajax.googleapis.com; connect-src *.apple.com; media-src http://*.apple.com http://*.akamaihd.net; img-src http://*.mzstatic.com">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div class="container">
-    <h1>LinkedList Lab</h1>
+    <h1>Music Player</h1>
     <p>Search for a song, check your favorites, and add them to a playlist.</p>
     <form id="search" action="/" method="GET">
       <input id="query" name="data" type="text">
       <input type="submit" value="SEARCH">
     </form>
+    <div id="player">
+      <h3>Music Player Controls</h3>
+      <button id="play">PLAY</button>
+      <button id="previous">PREVIOUS</button>
+      <button id="next">NEXT</button>
+      <button id="stop">STOP</button>
+    </div>
     <div id="results">
       <form id="add" action="/" method="POST"></form>
     </div>
