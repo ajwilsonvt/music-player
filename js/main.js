@@ -15,9 +15,8 @@ $(function() {
     e.preventDefault();
 
     $('#add').empty();
-    audios = null;
-    previousSong = 0;
-    currentSong = 0;
+    resetAudio();
+    
     var query = $('#query').val();
     console.log('queried', query);
 
@@ -65,6 +64,8 @@ $(function() {
    */
   $('#add').on('submit', function(e) {
     e.preventDefault();
+
+    resetAudio();
 
     var $songs = $('input:checked').parent();
     var songs = jQuery.makeArray($songs);
@@ -136,6 +137,21 @@ $(function() {
     } else {
       playFirst();
     }
+  }
+
+  function resetAudio() {
+    if (audios) {
+      console.log('resetting', audios);
+
+      for (let i = 0; i < audios.length; i++) {
+        audios[i].pause();
+        audios[i].currentTime = 0;
+      }
+    }
+
+    audios = null;
+    previousSong = 0;
+    currentSong = 0;
   }
 
 });
